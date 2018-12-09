@@ -11,7 +11,7 @@
 (function ($) {
 
   // Detect touch support
-  $.support.touch = 'ontouchend' in document;
+	$.support.touch = 'ontouchend' in document || navigator.maxTouchPoints > 0;
 
   // Ignore browsers without touch support
   if (!$.support.touch) {
